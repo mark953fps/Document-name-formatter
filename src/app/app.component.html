@@ -1,1 +1,14 @@
-<h1>{{ documentNameFormat(data) }}</h1>
+<table>
+  <colgroup width="50%"></colgroup>
+  <colgroup width="50%"></colgroup>
+
+  <th>File Name</th>
+  <th>Document Type</th>
+
+  <ng-container *ngFor="let d of data">
+    <tr>
+      <td>{{ documentNameFormat(d) }}</td>
+      <td>{{ d.documentType }}</td>
+    </tr>
+  </ng-container>
+</table>
